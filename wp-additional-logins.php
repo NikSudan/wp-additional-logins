@@ -55,8 +55,9 @@ class Wpal
 	{
 		$username = sanitize_user( $username, true );
 		$password = trim( $password );
-		foreach ( get_users() as $userID => $user ) {
-			foreach ( Wpal::get_login_details( $userID + 1 ) as $login ) {
+		foreach ( get_users() as $user ) {
+			$userID = $user->data->ID;
+			foreach ( Wpal::get_login_details( $userID ) as $login ) {
 				if ( strtoupper( $login['user_login'] ) == strtoupper( $username ) && wp_check_password( $password, $login['password'] ) ) {
 					return $user;
 				}
@@ -135,9 +136,10 @@ class Wpal
 	public static function get_all_logins()
 	{
 		$usernames = array();
-		foreach ( get_users() as $userID => $user ) {
+		foreach ( get_users() as $user ) {
+			$userID = $user->data->ID;
 			array_push( $usernames, $user->data->user_login );
-			$logins = Wpal::get_login_details( $userID + 1 );
+			$logins = Wpal::get_login_details( $userID );
 			foreach ( $logins as $login ) {
 				array_push( $usernames, $login['user_login'] );
 			}
