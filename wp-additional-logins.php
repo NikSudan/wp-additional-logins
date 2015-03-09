@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name: WordPress Additional Logins
+ * Plugin URI: https://github.com/NikSudan/wp-additional-logins/
  * Description: Adds additional login details to a user
  * Version: 1.0.0
  * Author: Nik Sudan
