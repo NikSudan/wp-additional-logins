@@ -24,4 +24,16 @@ You can add logins through two ways:
 
 Here you can view all credentials assigned to an account. You can add as many as you like, but they must include a unique username, a password, and an optional description. Logins can be removed at any time. Only 'pure' administrators can view the additional logins management page.
 
+## Screenshots
+
+![](http://i.imgur.com/FtjCHHR.png)
+
+![](http://i.imgur.com/AA5SIaj.png)
+
+![](http://i.imgur.com/NpxfqUN.png)
+
+![](http://i.imgur.com/ZFGqWEy.png)
+
+![](http://i.imgur.com/tvlGIJ5.png)
+
 And that's it!
